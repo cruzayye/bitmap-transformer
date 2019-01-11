@@ -1,12 +1,27 @@
-const assert = require('assert');
+const EventEmitter = require('events');
 const PixelReader = require('../lib/pixel-reader');
 
 describe('Pixel Reader', () => {
 
     it('reads pixel from buffer', done => {
-        const reader = new PixelReader({ bitsPerPixel: 24 });
-        
         const colors = [];
+        const reader = new PixelReader({ bitsPerPixel: 24 });
+        const ee = new EventEmitter();
+        ee.on('color', (r, g, b) => {
+           rgb = {
+               offset: 'something',
+               r: 90,
+               b: 78,
+               g: 70
+           }
+           console.log('WTF',rgb);
+           colors.push(rbg)
+
+        })
+
+
+        
+        
 
         // TODO: subscribe to reader "color" event and push into `colors` array.
         // A "color" object should look like:
