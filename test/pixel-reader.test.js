@@ -34,25 +34,6 @@ describe('Pixel Reader', () => {
       done();
     });
 
-      
-
-
-    
-
-
-    
-    
-
-    // TODO: subscribe to reader "color" event and push into `colors` array.
-    // A "color" object should look like:
-    // {
-    //     offset: <offset from the start of buffer passed to PixelReader>,
-    //     r: <red color value>,
-    //     g: <green color value>,
-    //     b: <blue color value>,
-    // }
-
-    // Create a buffer with known data for your colors
     const buffer = Buffer.alloc(9); // for three pixels
     // TODO: fill buffer with byte values that match your 
     // expected test colors
@@ -60,19 +41,15 @@ describe('Pixel Reader', () => {
     buffer.writeUInt8(0);
     buffer.writeUInt8(0);
 
-    // second color white
-    // #FFFFFF
     buffer.writeUInt8(255);
     buffer.writeUInt8(255);
     buffer.writeUInt8(255);
 
-    // third color blue
-    // #FF0000
+
     buffer.writeUInt8(255);
     buffer.writeUInt8(0);
     buffer.writeUInt8(0);
 
-    // Call read method with your buffer
     reader.read(buffer);
   });
 
