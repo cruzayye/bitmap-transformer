@@ -8,7 +8,7 @@ describe('bitmap header', () => {
     beforeEach( done => {
         // TODO: file read './test/test-bitmap.bmp' and put the promise return into buffer variable
         fs.readFile('./test/test-bitmap.bmp', (err, data)=>{
-            
+
         })
     });
 
@@ -31,3 +31,5 @@ describe('bitmap header', () => {
         expect(header.fileSize).toEqual(30054)
     });
 });
+
+//note
