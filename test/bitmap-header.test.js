@@ -7,8 +7,9 @@ describe('bitmap header', () => {
     let buffer = null;
     beforeEach( done => {
         // TODO: file read './test/test-bitmap.bmp' and put the promise return into buffer variable
-        fs.readFile('./test/test-bitmap.bmp', (err, data)=>{
-
+        fs.readFile('./test/test-bitmap.bmp', (err, data) => {
+            buffer = data;
+            done();
         })
     });
 
